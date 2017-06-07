@@ -18,13 +18,13 @@ class AdminTablesSeeder extends Seeder
         Administrator::create([
             'username'  => 'admin',
             'password'  => bcrypt('admin'),
-            'name'      => 'Administrator',
+            'name'      => '超级管理员',
         ]);
 
         // create a role.
         Role::truncate();
         Role::create([
-            'name'  => 'Administrator',
+            'name'  => '超级管理员',
             'slug'  => 'administrator',
         ]);
 
@@ -37,49 +37,49 @@ class AdminTablesSeeder extends Seeder
             [
                 'parent_id' => 0,
                 'order'     => 1,
-                'title'     => 'Index',
+                'title'     => '首页',
                 'icon'      => 'fa-bar-chart',
                 'uri'       => '/',
             ],
             [
                 'parent_id' => 0,
                 'order'     => 2,
-                'title'     => 'Admin',
+                'title'     => '系统设置',
                 'icon'      => 'fa-tasks',
                 'uri'       => '',
             ],
             [
                 'parent_id' => 2,
                 'order'     => 3,
-                'title'     => 'Users',
+                'title'     => '管理员',
                 'icon'      => 'fa-users',
                 'uri'       => 'auth/users',
             ],
             [
                 'parent_id' => 2,
                 'order'     => 4,
-                'title'     => 'Roles',
+                'title'     => '角色',
                 'icon'      => 'fa-user',
                 'uri'       => 'auth/roles',
             ],
             [
                 'parent_id' => 2,
                 'order'     => 5,
-                'title'     => 'Permission',
+                'title'     => '权限',
                 'icon'      => 'fa-user',
                 'uri'       => 'auth/permissions',
             ],
             [
                 'parent_id' => 2,
                 'order'     => 6,
-                'title'     => 'Menu',
+                'title'     => '菜单',
                 'icon'      => 'fa-bars',
                 'uri'       => 'auth/menu',
             ],
             [
                 'parent_id' => 2,
                 'order'     => 7,
-                'title'     => 'Operation log',
+                'title'     => '操作日志',
                 'icon'      => 'fa-history',
                 'uri'       => 'auth/logs',
             ],
